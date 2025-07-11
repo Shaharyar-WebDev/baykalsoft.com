@@ -55,7 +55,8 @@
                                         <a class="image image--type--product" href="images/products/product-2-700x700.jpg"
                                             target="_blank" data-width="700" data-height="700">
                                             <div class="image__body">
-                                                <img class="image__tag"
+                                                <img loading="lazy"
+ class="image__tag"
                                                     src="{{ asset('images/products/product-2-500x500.jpg') }}"
                                                     alt="">
                                             </div>
@@ -71,7 +72,8 @@
                                         <a class="image image--type--product" href="images/products/product-1-700x700.jpg"
                                             target="_blank" data-width="700" data-height="700">
                                             <div class="image__body">
-                                                <img class="image__tag"
+                                                <img loading="lazy"
+ class="image__tag"
                                                     src="{{ asset('images/products/product-1-500x500.jpg') }}"
                                                     alt="">
                                             </div>
@@ -87,7 +89,8 @@
                                         <a class="image image--type--product" href="images/products/product-3-700x700.jpg"
                                             target="_blank" data-width="700" data-height="700">
                                             <div class="image__body">
-                                                <img class="image__tag"
+                                                <img loading="lazy"
+ class="image__tag"
                                                     src="{{ asset('images/products/product-3-500x500.jpg') }}"
                                                     alt="">
                                             </div>
@@ -103,7 +106,8 @@
                                         <a class="image image--type--product" href="images/products/product-4-700x700.jpg"
                                             target="_blank" data-width="700" data-height="700">
                                             <div class="image__body">
-                                                <img class="image__tag"
+                                                <img loading="lazy"
+ class="image__tag"
                                                     src="{{ asset('images/products/product-4-500x500.jpg') }}"
                                                     alt="">
                                             </div>
@@ -114,25 +118,29 @@
                                     <div class="owl-carousel">
                                         <div class="product-gallery__thumbnails-item image image--type--product">
                                             <div class="image__body">
-                                                <img class="image__tag"
+                                                <img loading="lazy"
+ class="image__tag"
                                                     src="{{ asset('images/products/product-2-70x70.jpg') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="product-gallery__thumbnails-item image image--type--product">
                                             <div class="image__body">
-                                                <img class="image__tag"
+                                                <img loading="lazy"
+ class="image__tag"
                                                     src="{{ asset('images/products/product-1-70x70.jpg') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="product-gallery__thumbnails-item image image--type--product">
                                             <div class="image__body">
-                                                <img class="image__tag"
+                                                <img loading="lazy"
+ class="image__tag"
                                                     src="{{ asset('images/products/product-3-70x70.jpg') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="product-gallery__thumbnails-item image image--type--product">
                                             <div class="image__body">
-                                                <img class="image__tag"
+                                                <img loading="lazy"
+ class="image__tag"
                                                     src="{{ asset('images/products/product-4-70x70.jpg') }}" alt="">
                                             </div>
                                         </div>
@@ -646,7 +654,8 @@
                                                         <li class="reviews-list__item">
                                                             <div class="review">
                                                                 <div class="review__body">
-                                                                    <div class="review__avatar"><img
+                                                                    <div class="review__avatar"><img loading="lazy"
+
                                                                             src="{{ asset('images/avatars/avatar-1-42x42.jpg') }}"
                                                                             alt=""></div>
                                                                     <div class="review__meta">
@@ -684,7 +693,8 @@
                                                         <li class="reviews-list__item">
                                                             <div class="review">
                                                                 <div class="review__body">
-                                                                    <div class="review__avatar"><img
+                                                                    <div class="review__avatar"><img loading="lazy"
+
                                                                             src="{{ asset('images/avatars/avatar-2-42x42.jpg') }}"
                                                                             alt=""></div>
                                                                     <div class="review__meta">
@@ -722,7 +732,8 @@
                                                         <li class="reviews-list__item">
                                                             <div class="review">
                                                                 <div class="review__body">
-                                                                    <div class="review__avatar"><img
+                                                                    <div class="review__avatar"><img loading="lazy"
+
                                                                             src="{{ asset('images/avatars/avatar-3-42x42.jpg') }}"
                                                                             alt=""></div>
                                                                     <div class="review__meta">
@@ -1041,7 +1052,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-1-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1142,7 +1154,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-2-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1238,7 +1251,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-3-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1339,7 +1353,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-4-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1439,7 +1454,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-5-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1536,7 +1552,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-6-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1632,7 +1649,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-7-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1728,7 +1746,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-8-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1824,7 +1843,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-9-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>
@@ -1921,7 +1941,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="{{ asset('images/products/product-10-245x245.jpg') }}"
                                                                 alt="">
                                                         </a>

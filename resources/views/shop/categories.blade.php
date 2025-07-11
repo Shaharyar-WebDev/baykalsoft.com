@@ -37,7 +37,8 @@
                                     <a href="">
                                         <div class="image image--type--category">
                                             <div class="image__body">
-                                                <img class="image__tag" src="images/categories/category-1-200x200.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/categories/category-1-200x200.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -50,7 +51,8 @@
                                     <a href="">
                                         <div class="image image--type--category">
                                             <div class="image__body">
-                                                <img class="image__tag" src="images/categories/category-2-200x200.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/categories/category-2-200x200.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -63,7 +65,8 @@
                                     <a href="">
                                         <div class="image image--type--category">
                                             <div class="image__body">
-                                                <img class="image__tag" src="images/categories/category-3-200x200.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/categories/category-3-200x200.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -76,7 +79,8 @@
                                     <a href="">
                                         <div class="image image--type--category">
                                             <div class="image__body">
-                                                <img class="image__tag" src="images/categories/category-4-200x200.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/categories/category-4-200x200.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -89,7 +93,8 @@
                                     <a href="">
                                         <div class="image image--type--category">
                                             <div class="image__body">
-                                                <img class="image__tag" src="images/categories/category-5-200x200.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/categories/category-5-200x200.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -102,7 +107,8 @@
                                     <a href="">
                                         <div class="image image--type--category">
                                             <div class="image__body">
-                                                <img class="image__tag" src="images/categories/category-6-200x200.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/categories/category-6-200x200.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -115,7 +121,8 @@
                                     <a href="">
                                         <div class="image image--type--category">
                                             <div class="image__body">
-                                                <img class="image__tag" src="images/categories/category-7-200x200.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/categories/category-7-200x200.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -128,7 +135,8 @@
                                     <a href="">
                                         <div class="image image--type--category">
                                             <div class="image__body">
-                                                <img class="image__tag" src="images/categories/category-8-200x200.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/categories/category-8-200x200.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -204,7 +212,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-1-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -305,7 +314,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-2-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -401,7 +411,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-3-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -502,7 +513,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-4-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -602,7 +614,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-5-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -699,7 +712,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-6-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -795,7 +809,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-7-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -891,7 +906,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-8-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -987,7 +1003,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-9-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1084,7 +1101,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-10-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1198,7 +1216,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-1-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1250,7 +1269,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-2-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1299,7 +1319,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-3-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1351,7 +1372,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-4-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1404,7 +1426,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-5-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1452,7 +1475,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-6-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1501,7 +1525,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-7-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1547,7 +1572,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-8-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1596,7 +1622,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-9-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1644,7 +1671,8 @@
                                                 <div class="product-card__image">
                                                     <div class="image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag"
+                                                            <img loading="lazy"
+ class="image__tag"
                                                                 src="images/products/product-10-245x245.jpg"
                                                                 alt="">
                                                         </a>
@@ -1689,112 +1717,128 @@
                             <ul class="block-brands__list">
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-1.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-1.png" alt="">
                                         <span class="block-brands__item-name">AimParts</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-2.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-2.png" alt="">
                                         <span class="block-brands__item-name">WindEngine</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-3.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-3.png" alt="">
                                         <span class="block-brands__item-name">TurboElectric</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-4.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-4.png" alt="">
                                         <span class="block-brands__item-name">StartOne</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-5.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-5.png" alt="">
                                         <span class="block-brands__item-name">Brandix</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-6.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-6.png" alt="">
                                         <span class="block-brands__item-name">ABS-Brand</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-7.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-7.png" alt="">
                                         <span class="block-brands__item-name">GreatCircle</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-8.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-8.png" alt="">
                                         <span class="block-brands__item-name">JustRomb</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-9.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-9.png" alt="">
                                         <span class="block-brands__item-name">FastWheels</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-10.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-10.png" alt="">
                                         <span class="block-brands__item-name">Stroyka-X</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-11.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-11.png" alt="">
                                         <span class="block-brands__item-name">Mission-51</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-12.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-12.png" alt="">
                                         <span class="block-brands__item-name">FuelCorp</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-13.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-13.png" alt="">
                                         <span class="block-brands__item-name">RedGate</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-14.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-14.png" alt="">
                                         <span class="block-brands__item-name">Blocks</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-15.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-15.png" alt="">
                                         <span class="block-brands__item-name">BlackBox</span>
                                     </a>
                                 </li>
                                 <li class="block-brands__divider" role="presentation"></li>
                                 <li class="block-brands__item">
                                     <a href="" class="block-brands__item-link">
-                                        <img src="images/brands/brand-16.png" alt="">
+                                        <img loading="lazy"
+ src="images/brands/brand-16.png" alt="">
                                         <span class="block-brands__item-name">SquareGarage</span>
                                     </a>
                                 </li>

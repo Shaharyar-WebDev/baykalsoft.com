@@ -57,7 +57,8 @@
                                     <td class="order-list__column-image">
                                         <div class="image image--type--product">
                                             <a href="product-full.html" class="image__body">
-                                                <img class="image__tag" src="images/products/product-1-40x40.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/products/product-1-40x40.jpg"
                                                     alt="">
                                             </a>
                                         </div>
@@ -96,7 +97,8 @@
                                     <td class="order-list__column-image">
                                         <div class="image image--type--product">
                                             <a href="product-full.html" class="image__body">
-                                                <img class="image__tag" src="images/products/product-2-40x40.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/products/product-2-40x40.jpg"
                                                     alt="">
                                             </a>
                                         </div>
@@ -115,7 +117,8 @@
                                     <td class="order-list__column-image">
                                         <div class="image image--type--product">
                                             <a href="product-full.html" class="image__body">
-                                                <img class="image__tag" src="images/products/product-3-40x40.jpg"
+                                                <img loading="lazy"
+ class="image__tag" src="images/products/product-3-40x40.jpg"
                                                     alt="">
                                             </a>
                                         </div>

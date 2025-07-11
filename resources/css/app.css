@@ -9,3 +9,19 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@import "../vendor/bootstrap/css/bootstrap.css";
+@import "../vendor/owl-carousel/assets/owl.carousel.min.css";
+@import "../vendor/photoswipe/photoswipe.css";
+@import "../vendor/photoswipe/default-skin/default-skin.css";
+@import "../vendor/select2/css/select2.min.css";
+@import "../vendor/fontawesome/css/all.min.css";
+
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/roboto-v48-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

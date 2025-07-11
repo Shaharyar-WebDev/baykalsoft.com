@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['cacheResponse:300'])->group(function () {
+Route::middleware([])->group(function () {
 
 Route::get('/home', [HomeController::class, 'index']);
 

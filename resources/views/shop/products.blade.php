@@ -851,7 +851,8 @@
                                                 <div class="widget-products__item">
                                                     <div class="widget-products__image image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag" src="{{ asset('images/products/product-1-64x64.jpg') }}" alt="">
+                                                            <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-1-64x64.jpg') }}" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="widget-products__info">
@@ -866,7 +867,8 @@
                                                 <div class="widget-products__item">
                                                     <div class="widget-products__image image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag" src="{{ asset('images/products/product-2-64x64.jpg') }}" alt="">
+                                                            <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-2-64x64.jpg') }}" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="widget-products__info">
@@ -881,7 +883,8 @@
                                                 <div class="widget-products__item">
                                                     <div class="widget-products__image image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag" src="{{ asset('images/products/product-3-64x64.jpg') }}" alt="">
+                                                            <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-3-64x64.jpg') }}" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="widget-products__info">
@@ -897,7 +900,8 @@
                                                 <div class="widget-products__item">
                                                     <div class="widget-products__image image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag" src="{{ asset('images/products/product-4-64x64.jpg') }}" alt="">
+                                                            <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-4-64x64.jpg') }}" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="widget-products__info">
@@ -912,7 +916,8 @@
                                                 <div class="widget-products__item">
                                                     <div class="widget-products__image image image--type--product">
                                                         <a href="product-full.html" class="image__body">
-                                                            <img class="image__tag" src="{{ asset('images/products/product-5-64x64.jpg') }}" alt="">
+                                                            <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-5-64x64.jpg') }}" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="widget-products__info">
@@ -1056,7 +1061,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-1-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-1-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1164,7 +1170,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-2-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-2-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1267,7 +1274,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-3-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-3-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1374,7 +1382,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-4-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-4-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1480,7 +1489,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-5-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-5-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1583,7 +1593,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-6-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-6-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1686,7 +1697,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-7-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-7-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1789,7 +1801,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-8-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-8-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1892,7 +1905,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-9-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-9-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -1995,7 +2009,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-10-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-10-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2098,7 +2113,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-11-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-11-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2201,7 +2217,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-12-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-12-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2304,7 +2321,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-13-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-13-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2407,7 +2425,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-14-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-14-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2510,7 +2529,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-15-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-15-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2613,7 +2633,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-16-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-16-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2716,7 +2737,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-17-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-17-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2819,7 +2841,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-18-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-18-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -2922,7 +2945,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-19-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-19-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">
@@ -3029,7 +3053,8 @@
                                                     <div class="product-card__image">
                                                         <div class="image image--type--product">
                                                             <a href="product-full.html" class="image__body">
-                                                                <img class="image__tag" src="{{ asset('images/products/product-20-245x245.jpg') }}" alt="">
+                                                                <img loading="lazy"
+ class="image__tag" src="{{ asset('images/products/product-20-245x245.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="status-badge status-badge--style--success product-card__fit status-badge--has-icon status-badge--has-text">

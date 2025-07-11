@@ -47,7 +47,8 @@
                                         <td class="cart-table__column cart-table__column--image">
                                             <div class="image image--type--product">
                                                 <a href="product-full.html" class="image__body">
-                                                    <img class="image__tag" src="images/products/product-4-160x160.jpg"
+                                                    <img loading="lazy"
+ class="image__tag" src="images/products/product-4-160x160.jpg"
                                                         alt="">
                                                 </a>
                                             </div>
@@ -88,7 +89,8 @@
                                         <td class="cart-table__column cart-table__column--image">
                                             <div class="image image--type--product">
                                                 <a href="product-full.html" class="image__body">
-                                                    <img class="image__tag" src="images/products/product-2-160x160.jpg"
+                                                    <img loading="lazy"
+ class="image__tag" src="images/products/product-2-160x160.jpg"
                                                         alt="">
                                                 </a>
                                             </div>
@@ -125,7 +127,8 @@
                                         <td class="cart-table__column cart-table__column--image">
                                             <div class="image image--type--product">
                                                 <a href="product-full.html" class="image__body">
-                                                    <img class="image__tag" src="images/products/product-5-160x160.jpg"
+                                                    <img loading="lazy"
+ class="image__tag" src="images/products/product-5-160x160.jpg"
                                                         alt="">
                                                 </a>
                                             </div>

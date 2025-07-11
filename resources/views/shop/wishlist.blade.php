@@ -45,7 +45,8 @@
                             <td class="wishlist__column wishlist__column--body wishlist__column--image">
                                 <div class="image image--type--product">
                                     <a href="product-full.html" class="image__body">
-                                        <img class="image__tag" src="images/products/product-1-160x160.jpg" alt="">
+                                        <img loading="lazy"
+ class="image__tag" src="images/products/product-1-160x160.jpg" alt="">
                                     </a>
                                 </div>
                             </td>
@@ -95,7 +96,8 @@
                             <td class="wishlist__column wishlist__column--body wishlist__column--image">
                                 <div class="image image--type--product">
                                     <a href="product-full.html" class="image__body">
-                                        <img class="image__tag" src="images/products/product-2-160x160.jpg" alt="">
+                                        <img loading="lazy"
+ class="image__tag" src="images/products/product-2-160x160.jpg" alt="">
                                     </a>
                                 </div>
                             </td>
@@ -145,7 +147,8 @@
                             <td class="wishlist__column wishlist__column--body wishlist__column--image">
                                 <div class="image image--type--product">
                                     <a href="product-full.html" class="image__body">
-                                        <img class="image__tag" src="images/products/product-3-160x160.jpg"
+                                        <img loading="lazy"
+ class="image__tag" src="images/products/product-3-160x160.jpg"
                                             alt="">
                                     </a>
                                 </div>
