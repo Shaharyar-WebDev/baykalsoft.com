@@ -10,7 +10,7 @@ const SidebarType = localStorage.getItem("sidebarOpen") === "true" ? 'full' : 'm
 
 const cardBorder = localStorage.getItem("cardBorder") === "true";
 
-console.log(SidebarType);
+// console.log(SidebarType);
 
 var userSettings = {
     Layout: Layout, // vertical | horizontal

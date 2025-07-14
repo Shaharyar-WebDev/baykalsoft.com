@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"  dir="{{ in_array(app()->getLocale(), config('locale.rtl_locales') ) ? 'rtl' : 'ltr' }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"  dir="{{ in_array(app()->getLocale(), config('locale.rtl_locales') ) ? 'rtl' : 'ltr' }}" data-bs-theme="dark">
 
 <head>
     @include('partials.admin.head')

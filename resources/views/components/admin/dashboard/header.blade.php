@@ -7,10 +7,7 @@
          <nav class="navbar navbar-expand-lg p-0">
              <ul class="navbar-nav">
                  <li class="nav-item nav-icon-hover-bg rounded-circle d-flex">
-                    <script>
-                        let sidebarOpen = localStorage.getItem("sidebarOpen") === "true";
-                    </script>
-                     <a class="nav-link  sidebartoggler" id="headerCollapse" href="javascript:void(0)" onclick="localStorage.setItem('sidebarOpen', !sidebarOpen), sidebarOpen = !sidebarOpen">
+                     <a class="nav-link sidebartoggler" id="headerCollapse" href="javascript:void(0)">
                          <iconify-icon icon="solar:hamburger-menu-line-duotone" class="fs-6"></iconify-icon>
                      </a>
                  </li>
@@ -163,7 +160,7 @@
              </ul>
 
              <div class="d-block d-lg-none py-9 py-xl-0">
-                 <img src="{{ asset('images/admin/logos/logo.svg') }}" alt="matdash-img" loading="lazy">
+                 <img src="{{ asset('images/admin/logos/logo.svg') }}" alt="logo" width="80px" loading="lazy">
              </div>
              <a class="navbar-toggler p-0 border-0 nav-icon-hover-bg rounded-circle" href="javascript:void(0)"
                  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
@@ -437,8 +434,8 @@
              aria-labelledby="offcanvasWithBothOptionsLabel">
              <nav class="sidebar-nav scroll-sidebar">
                  <div class="offcanvas-header justify-content-between">
-                     <a href="index.html" class="text-nowrap logo-img">
-                         <img src="{{ asset('images/admin/logos/logo-icon.svg') }}" alt="Logo" loading="lazy">
+                     <a href="{{ route('admin.dashboard') }}" class="text-nowrap logo-img">
+                         <img src="{{ asset('images/admin/logos/logo-icon.svg') }}" alt="Logo" width="80px" loading="lazy">
                      </a>
                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                          aria-label="Close"></button>
@@ -575,8 +572,8 @@
                      </a>
                  </li>
                  <li class="nav-item d-none d-xl-flex align-items-center">
-                     <a href="../horizontal/index.html" class="text-nowrap nav-link">
-                         <img src="{{ asset('images/admin/logos/logo.svg') }}" alt="matdash-img" loading="lazy">
+                     <a href="{{ route('admin.dashboard') }}" class="text-nowrap nav-link">
+                         <img src="{{ asset('images/admin/logos/logo.svg') }}" width="80px" alt="logo">
                      </a>
                  </li>
                  <li class="nav-item d-none d-xl-flex align-items-center nav-icon-hover-bg rounded-circle">
@@ -727,8 +724,8 @@
                  </li>
              </ul>
              <div class="d-block d-xl-none">
-                 <a href="index.html" class="text-nowrap nav-link">
-                     <img src="{{ asset('images/admin/logos/logo.svg') }}" alt="matdash-img" loading="lazy">
+                 <a href="{{ route('admin.dashboard') }}" class="text-nowrap nav-link">
+                     <img src="{{ asset('images/admin/logos/logo1.svg') }}" alt="logo" width="80px" loading="lazy">
                  </a>
              </div>
              <a class="navbar-toggler nav-icon-hover p-0 border-0 nav-icon-hover-bg rounded-circle"

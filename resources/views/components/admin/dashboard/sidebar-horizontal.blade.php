@@ -9,7 +9,9 @@
                     <li
                         class="sidebar-item {{ isset($link['children']) ? '' : (request()->routeIs($link['route']) ? 'selected' : '') }}">
                         <a class="sidebar-link {{ isset($link['children']) ? 'has-arrow' : '' }}"
-                            href="{{ isset($link['children']) ? '#' : (isset($link['url']) ? $link['url'] : route($link['route'])) }}"
+                        @if(!isset($link['children']))
+                         href="{{ isset($link['url']) ? $link['url'] : route($link['route']) }}"
+                        @endif
                             aria-expanded="false">
                             <span>
                                 <iconify-icon icon="{{ $link['icon'] }}" class=""></iconify-icon>
@@ -47,7 +49,7 @@
     </div>
     <!-- End Sidebar scroll-->
 </aside>
-{{-- 
+{{--
 <!-- ============================= -->
 <!-- Home -->
 <!-- ============================= -->

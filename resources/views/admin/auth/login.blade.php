@@ -15,7 +15,7 @@
                                     <div class="col-lg-11">
                                         <div class="card-body">
                                             <div class="text-center mb-4">
-                                                <img src="{{ asset('storage/admin/logos/baykallar.png') }}" width="200px"
+                                                <img src="{{ asset('images/admin/logos/favicon.png') }}" width="200px"
                                                     alt="">
                                             </div>
                                             <div class="position-relative text-center my-4">

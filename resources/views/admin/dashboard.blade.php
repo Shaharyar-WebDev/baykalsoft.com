@@ -117,6 +117,11 @@
                             </div>
                         </div>
                     </div>
+                    <style>
+                        .apexcharts-inner{
+                            overflow : hidden;
+                        }
+                    </style>
                     <div style="height: 285px;" class="me-n7">
                         <div id="revenue-forecast"></div>
                     </div>
@@ -748,3 +753,7 @@
     </div>
 
 @endsection
+
+@push('scripts')
+<script src="{{ asset('js/admin/dashboards/dashboard1.js') }}" ></script>
+@endpush
