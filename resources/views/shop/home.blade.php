@@ -254,19 +254,19 @@
 
     <div class="block-space block-space--layout--divider-nl"></div>
 
-    {{-- <x-shop.sections.banner/> --}}
+    <x-shop.sections.banner/>
 
     <div class="block-space block-space--layout--divider-nl"></div>
 
-    {{-- <x-shop.sections.arrival/> --}}
+    <x-shop.sections.arrival/>
 
     <div class="block-space block-space--layout--divider-nl"></div>
 
-    {{-- <x-shop.sections.blog/> --}}
+    <x-shop.sections.blog/>
 
     <div class="block-space block-space--layout--divider-nl"></div>
 
-    {{-- <x-shop.sections.brand/> --}}
+    <x-shop.sections.brand/>
 
     <div class="block-space block-space--layout--divider-nl d-xl-block d-none"></div>
     <div class="block block-products-columns">

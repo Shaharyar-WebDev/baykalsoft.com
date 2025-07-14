@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Shop\CartController;
 use App\Http\Controllers\Shop\HomeController;
@@ -64,3 +66,15 @@ Route::prefix('account')->group(function(){
 });
 
 
+Route::prefix('admin')->group(function () {
+
+    Route::get('/login', [AuthController::class, 'loginForm'])->name('admin.login.form');
+    Route::post('/login', [AuthController::class, 'login'])->name('admin.login');
+
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+
+    Route::get('/dashboard/test', [AdminDashboardController::class, 'index'])->name('admin.test');
+
+     Route::get('/dashboard/new', [AdminDashboardController::class, 'index'])->name('admin.new');
+
+});

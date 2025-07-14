@@ -1,3 +1,3 @@
-<script src="{{ asset('vendor/vendor.js') }}"></script>
-@vite('resources/js/app.js')
+<script src="{{ asset('vendor/vendor.js') }}" defer></script>
+@vite('resources/js/shop/app.js')
 

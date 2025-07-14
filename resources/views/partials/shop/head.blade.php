@@ -4,12 +4,12 @@
   <title> {{ config('app.name') }} - @yield('title')</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  @vite('resources/css/app.css')
-
   @php
-      $theme = config('app.theme', 'blue'); 
+      $theme = config('app.theme', 'blue');
   @endphp
 
-  @vite("resources/css/themes/{$theme}/index.css")
+  @vite('resources/css/shop/app.css')
+
+  @vite("resources/css/shop/themes/{$theme}/index.css")
 
   @stack('styles')

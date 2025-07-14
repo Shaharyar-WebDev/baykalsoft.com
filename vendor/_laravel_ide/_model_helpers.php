@@ -8,6 +8,7 @@ namespace App\Models {
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
      * @property string|null $remember_token
+     * @property mixed $role
      * @property string $password
      * @property \Illuminate\Support\Carbon|null $email_verified_at
      * @property string $email
@@ -15,14 +16,23 @@ namespace App\Models {
      * @property int $id
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
      * @property-read int|null $notifications_count
+     * @property-read \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Role> $roles
+     * @property-read int|null $roles_count
+     * @property-read \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Permission> $permissions
+     * @property-read int|null $permissions_count
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereId($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereName($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereEmail($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereEmailVerifiedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User wherePassword($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereRole($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereRememberToken($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereUpdatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User role()
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User withoutRole()
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User permission()
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User withoutPermission()
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User query()
