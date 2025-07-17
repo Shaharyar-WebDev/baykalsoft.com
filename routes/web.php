@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\Admin\Auth\AuthController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\SettingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Shop\CartController;
 use App\Http\Controllers\Shop\HomeController;
 use App\Http\Controllers\Shop\CompareController;
 use App\Http\Controllers\Shop\ProductController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Shop\CategoryController;
 use App\Http\Controllers\Shop\CheckoutController;
 use App\Http\Controllers\Shop\WishlistController;
@@ -76,5 +78,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/dashboard/test', [AdminDashboardController::class, 'index'])->name('admin.test');
 
      Route::get('/dashboard/new', [AdminDashboardController::class, 'index'])->name('admin.new');
+
+     Route::get('/settings', [SettingController::class, 'index'])->name('admin.settings');
+
+     Route::get('/products', [AdminProductController::class, 'index'])->name('admin.products');
 
 });

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"  dir="{{ in_array(app()->getLocale(), config('locale.rtl_locales') ) ? 'rtl' : 'ltr' }}" data-bs-theme="dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+    dir="{{ in_array(app()->getLocale(), config('locale.rtl_locales')) ? 'rtl' : 'ltr' }}" data-bs-theme="dark">
 
 <head>
     @include('partials.admin.head')
+    @routes
 </head>
 
 <body class="link-sidebar">

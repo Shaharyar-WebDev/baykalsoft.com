@@ -1,3 +1,7 @@
+@stack('scripts-hp')
+
+<!-- Include the JS (from CDN) -->
+<script src="https://unpkg.com/@bprogress/core/dist/index.global.js"></script>
 <script src="{{ asset('libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('libs/simplebar/dist/simplebar.min.js') }}"></script>
 
@@ -13,6 +17,21 @@
 
 @stack('scripts')
 <script>
+    const {
+        BProgress
+    } = BProgressJS;
+
+    BProgress.configure({
+        color: '#0d6efd',
+        height: '4px',
+        position: 'top',
+        transition: '0.4s ease',
+    });
+
+    // Start and done demo
+    BProgress.start();
+
+
     document.addEventListener('DOMContentLoaded', () => {
 
         let sidebarOpen = localStorage.getItem("sidebarOpen") === "true";
@@ -42,7 +61,7 @@
         });
 
         sidebarNav.addEventListener('mouseleave', () => {
-               if (document.body.getAttribute('data-sidebartype') == 'mini-sidebar') {
+            if (document.body.getAttribute('data-sidebartype') == 'mini-sidebar') {
                 logoTxt.style.display = 'none';
             }
         });
@@ -71,5 +90,8 @@
                 }
             });
         });
+
+        BProgress.done();
     });
 </script>
+@vite(['resources/js/admin/app.js'])

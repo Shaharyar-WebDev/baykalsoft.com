@@ -1,4 +1,8 @@
 {
+  "_bootstrap-DNxiirP_.js": {
+    "file": "assets/bootstrap-DNxiirP_.js",
+    "name": "bootstrap"
+  },
   "public/vendor/fontawesome/webfonts/fa-brands-400.eot": {
     "file": "assets/fa-brands-400-BP-byM1z.eot",
     "src": "public/vendor/fontawesome/webfonts/fa-brands-400.eot"
@@ -105,10 +109,22 @@
     "src": "resources/css/shop/themes/violet/index.css",
     "isEntry": true
   },
+  "resources/js/admin/app.js": {
+    "file": "assets/app-C17I4fKL.js",
+    "name": "app",
+    "src": "resources/js/admin/app.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap-DNxiirP_.js"
+    ]
+  },
   "resources/js/shop/app.js": {
-    "file": "assets/app-DQdTpsbK.js",
+    "file": "assets/app-BM7fQKfT.js",
     "name": "app",
     "src": "resources/js/shop/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_bootstrap-DNxiirP_.js"
+    ]
   }
 }

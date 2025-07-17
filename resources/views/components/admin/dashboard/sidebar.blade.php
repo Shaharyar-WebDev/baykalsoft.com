@@ -1,8 +1,6 @@
  <!-- Sidebar Start -->
  <aside class="left-sidebar with-vertical">
-
      <div>
-
          {{-- sidebar Logo --}}
          <div class="brand-logo d-flex align-items-center">
              <a href="{{ route('admin.dashboard') }}" class="text-nowrap logo-img">
@@ -21,8 +19,6 @@
                  </div>
              </a>
          </div>
-
-
          {{-- Sidebar Nav --}}
          <nav class="sidebar-nav scroll-sidebar" data-simplebar>
              <ul class="sidebar-menu" id="sidebarnav">
@@ -31,14 +27,12 @@
                      <li class="sidebar-item">
                          <a class="sidebar-link {{ isset($link['children']) ? '' : (request()->routeIs($link['route']) ? 'active' : '') }}
  {{ isset($link['children']) ? 'has-arrow' : '' }}"
-                             role="button" tabindex="0" id="get-url"
-                             aria-expanded="false"
+                             role="button" tabindex="0" id="get-url" aria-expanded="false"
                              @isset($link['children'])
                              onclick="return false;"
                              @else
                              href="{{ isset($link['url']) ? $link['url'] : route($link['route']) }}"
-                             @endisset
-                             >
+                             @endisset>
                              <iconify-icon icon="{{ $link['icon'] }}" class=""></iconify-icon>
                              <span class="hide-menu">{{ $link['label'] }}</span>
                          </a>

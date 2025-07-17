@@ -12,6 +12,7 @@ export default defineConfig({
                 "resources/css/shop/themes/blue/index.css",
                 "resources/css/shop/themes/orange/index.css",
                 "resources/css/shop/themes/violet/index.css",
+                "resources/js/admin/app.js"
             ],
             refresh: true,
         }),

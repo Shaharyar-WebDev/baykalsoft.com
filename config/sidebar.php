@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return [
         [
@@ -23,4 +23,21 @@ return [
                 ],
             ],
         ],
+        [
+            'label' => 'Settings',
+            'icon' => 'solar:settings-line-duotone',
+            'route' => 'admin.settings',
+        ],
+        [
+            'label' => 'Products',
+            'icon' => 'solar:settings-line-duotone',
+            'route' => 'admin.products',
+           'children' => [
+                [
+                    'label' => 'All products',
+                    'route' => 'admin.products',
+                    'icon' => 'solar:widget-4-line-duotone',
+                ],
+            ],
+        ]
     ];

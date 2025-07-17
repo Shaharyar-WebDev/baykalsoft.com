@@ -13,11 +13,13 @@
         "barryvdh/laravel-translation-manager": "^0.6.8",
         "laravel-lang/common": "^6.7",
         "laravel/framework": "^12.0",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1",
         "laraveledge/laravel-locale": "^1.9",
         "spatie/laravel-permission": "^6.20",
         "spatie/laravel-responsecache": "^7.7",
-        "tanmuhittin/laravel-google-translate": "^2.4"
+        "tanmuhittin/laravel-google-translate": "^2.4",
+        "tightenco/ziggy": "^2.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
