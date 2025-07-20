@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use PDO;
 use Exception;
+use Throwable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -16,6 +17,8 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+
+        try{
 
         $q = $request->input('search');
         $perPage = $request->input('perPage', 10);
@@ -107,13 +110,14 @@ class ProductController extends Controller
         ]));
 
 
-        $rows = Cache::remember($cacheKey, '3600', function () use ($query, $perPage) {
+        $rows = Cache::memo()->remember($cacheKey, '3600', function () use ($query, $perPage) {
             return $query->paginate($perPage);
         });
 
 
         if ($rows->isEmpty()) {
             return response()->json([
+                'success' => 'true',
                 'message' => 'No rows found',
                 'data' => [
                     'data' => [],
@@ -122,13 +126,23 @@ class ProductController extends Controller
                     'total' => 0,
                     'links' => []
                 ]
-            ]);
+            ], 200);
         }
 
         return response()->json([
+            'success' => true,
             'message' => 'Fetched successfully',
             'data' =>  $rows,
         ], 200);
+
+    }catch(Throwable $error){
+
+       return response()->json([
+            'success' => true,
+            'message' => 'An Error Occured',
+            'errors' =>  [$error->getMessage()],
+        ], 500);
+    }
     }
 
     /**

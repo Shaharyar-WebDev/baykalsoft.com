@@ -117,4 +117,9 @@ return array (
   'view' => 'View',
   'yes' => 'Yes',
   'wait' => 'Please wait...',
+  'columns' => 'Columns',
+  'reset' => 'Reset',
+  'deselect_all' => 'Deselect All',
+  'invalid_page' => 'Invalid Page',
+  'invalid_page_number' => 'The page number you entered is invalid.',
 );

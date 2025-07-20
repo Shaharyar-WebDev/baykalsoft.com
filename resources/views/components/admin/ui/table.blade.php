@@ -2,13 +2,19 @@
     'headers' => [],
     'route' => '',
     'perPage' => 5,
-    'emptyMessage' => 'No Records Found',
+    'perPageOptions' => ['5', '10', '25', '50'],
+    'emptyMessage' => __('messages.no_records'),
     'tableId' => '',
+    'locale' => app()->getLocale(),
+    'updateRoute' => null,
+    'deleteRoute' => null,
+    'actions' => false,
 ])
 
 <div class="card" id="{{ $tableId }}" x-data="productTable($el)" data-route="{{ $route }}"
-    data-perpage="{{ $perPage }}" data-headers="{{ json_encode($headers) }}" data-emptymessage="{{ $emptyMessage }}"
-    x-init="init()" data-tableid="{{ $tableId }}">
+    data-perpage="{{ $perPage }}" data-locale="{{ $locale }}" data-headers="{{ json_encode($headers) }}"
+    data-emptymessage="{{ $emptyMessage }}" x-init="init()" data-updateroute="{{ $updateRoute }}"
+    data-deleteroute="{{ $deleteRoute }}" data-actions="{{ $actions }}" data-tableid="{{ $tableId }}">
     <div class="card-body">
 
         <div class="d-flex flex-wrap justify-content-end align-items-stretch gap-2 mb-3">
@@ -17,7 +23,7 @@
                     type="button" data-bs-toggle="dropdown">
                     <iconify-icon icon="solar:hamburger-menu-bold" class="fs-4"></iconify-icon>
                     <span>
-                        Columns
+                        {{ __('actions.columns') }}
                     </span>
                 </button>
                 <ul class="dropdown-menu border shadow-md dropdown-menu-animate-up p-2 shadow-lg border-sm"
@@ -35,12 +41,12 @@
                     <li class="cursor-pointer">
                         <button class="dropdown-item text-primary fw-semibold"
                             @click="visibleColumns = Object.keys(headers); saveVisibleColumns();">
-                            Select All
+                            {{ __('actions.select_all') }}
                         </button>
                     </li>
                     <li class="cursor-pointer">
                         <button class="dropdown-item text-danger" @click="visibleColumns = []; saveVisibleColumns();">
-                            Deselect All
+                            {{ __('actions.deselect_all') }}
                         </button>
                     </li>
                 </ul>
@@ -48,26 +54,30 @@
 
             <div class="input-group" style="max-width: 300px; flex: 1 1 250px;">
                 <input type="text" @keydown.enter="fetchData(buildRoute({ page: 1 }))" class="form-control"
-                    placeholder="Search..." aria-label="Search" x-model="search">
-                <button tabindex="0" role="button" @click="fetchData(buildRoute({ page: 1 }))"
+                    placeholder="{{ __('actions.search') }}..." aria-label="Search" x-model="search">
+                <button :disabled="loading" tabindex="0" role="button" @click="fetchData(buildRoute({ page: 1 }))"
                     class="btn bg-primary-subtle text-primary" type="button">
-                    <iconify-icon icon="solar:magnifer-linear"></iconify-icon>
+                    <span x-show="loading" class="spinner-border spinner-border-sm ms-1" role="status"
+                        aria-hidden="true"></span>
+                    <iconify-icon x-show="!loading" icon="solar:magnifer-linear"></iconify-icon>
                 </button>
             </div>
-            <button class="btn bg-secondary-subtle text-secondary d-flex align-items-center" @click="resetTable">
-                <iconify-icon icon="solar:refresh-bold"></iconify-icon>
+            <button :disabled="loading" class="btn bg-secondary-subtle text-secondary d-flex align-items-center"
+                @click="resetTable">
+                <span x-show="loading" class="spinner-border spinner-border-sm ms-1" role="status"
+                    aria-hidden="true"></span>
+                <iconify-icon x-show="!loading" icon="solar:refresh-bold"></iconify-icon>
                 <span class="ms-2">
-                    Reset
+                    {{ __('actions.reset') }}
                 </span>
             </button>
         </div>
         <div>
             <div class="table-responsive border shadow-md rounded">
 
-                <div x-show="visibleColumns.length === 0" class="text-center p-5" x-transition.opacity.duration.200ms>
+                <div x-show="visibleColumns.length === 0" class="text-center p-5">
                     <iconify-icon icon="solar:eye-closed-line-duotone" style="font-size: 2rem;"></iconify-icon>
-                    <p class="mt-3">No columns selected. Please choose at least one from the <strong>Columns</strong>
-                        menu.</p>
+                    <p class="mt-3 fs-3"><strong>{{ __('messages.no_columns_selected') }}</strong></p>
                 </div>
 
 
@@ -78,7 +88,7 @@
                                 <template x-if="visibleColumns.includes(field)">
                                     <th class="fw-semibold cursor-pointer" role="button" tabindex="0"
                                         @click="sort(field)" @keydown.enter="sort(field)"
-                                        @keydown.space.prevent="sort(field)">
+                                        @keydown.space.prevent="sort(field)" x-transition.opacity.duration.200ms>
                                         <span x-text="header"></span>
                                         <template x-if="sortBy === field">
                                             <iconify-icon
@@ -89,6 +99,13 @@
                                     </th>
                                 </template>
                             </template>
+                            @if ($actions)
+                                <template x-if="visibleColumns.length !== 0">
+                                    <th class="fw-semibold cursor-pointer"  x-show="!loading" role="button" tabindex="0">
+                                        {{ __('actions.actions') }}
+                                    </th>
+                                </template>
+                            @endif
                         </tr>
                     </thead>
 
@@ -118,12 +135,33 @@
                             </td>
                         </tr>
                         <template x-for="row in rows">
-                            <tr class="border-bottom border-dark-subtle">
+                            <tr tabindex="0" role="button" class="border-bottom border-dark-subtle">
                                 <template x-for="(data, col) in row">
-                                    <template x-if="visibleColumns.includes(col)">
-                                        <td x-text="data"></td>
+                                    <template x-if="visibleColumns.includes(col) && headers[col]">
+                                        <td x-text="data" x-transition.opacity.duration.200ms></td>
                                     </template>
                                 </template>
+                                @if ($actions)
+                                    <template x-if="visibleColumns.length !== 0">
+                                        <td class="fw-semibold cursor-pointer" style="min-width: 200px;"
+                                            role="button" tabindex="0" x-show="!loading">
+                                            <a data-bs-toggle="tooltip" title="{{ __('actions.edit') }}" :href='updateRoute.replace("__ID__", row.id)'>
+                                                <button type="button"
+                                                    class="btn mb-1 btn-primary rounded-circle round d-inline-flex align-items-center justify-content-center">
+                                                    <iconify-icon class="fs-4"
+                                                        icon="solar:gallery-edit-bold"></iconify-icon>
+                                                </button>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" title="{{ __('actions.delete') }}" @click="deleteRow(row)">
+                                                <button type="button"
+                                                    class="btn mb-1 mx-2 btn-danger rounded-circle round d-inline-flex align-items-center justify-content-center">
+                                                    <iconify-icon class="fs-4"
+                                                        icon="solar:trash-bin-2-bold"></iconify-icon>
+                                                </button>
+                                            </a>
+                                        </td>
+                                    </template>
+                                @endif
                             </tr>
                         </template>
                     </tbody>
@@ -134,7 +172,7 @@
                                 <template x-if="visibleColumns.includes(field)">
                                     <th class="fw-semibold cursor-pointer" role="button" tabindex="0"
                                         @click="sort(field)" @keydown.enter="sort(field)"
-                                        @keydown.space.prevent="sort(field)">
+                                        @keydown.space.prevent="sort(field)" x-transition.opacity.duration.200ms>
                                         <span x-text="header"></span>
                                         <template x-if="sortBy === field">
                                             <iconify-icon
@@ -146,6 +184,13 @@
                                     </th>
                                 </template>
                             </template>
+                            @if ($actions)
+                                <template x-if="visibleColumns.length !== 0">
+                                    <th class="fw-semibold cursor-pointer"  x-show="!loading" role="button" tabindex="0">
+                                        {{ __('actions.action') }}
+                                    </th>
+                                </template>
+                            @endif
                         </tr>
                     </tfoot>
                 </table>
@@ -153,7 +198,10 @@
             <nav class="d-flex flex-wrap align-items-center justify-content-between gap-3 py-3">
                 <div class="flex-grow-1 text-center text-md-start">
                     <span
-                        x-text="`Showing ${paginationInfo.from} to ${paginationInfo.to} of ${paginationInfo.total} records`">
+                        x-text="paginationMsg
+        .replace(':from', paginationInfo.from)
+        .replace(':to', paginationInfo.to)
+        .replace(':total', paginationInfo.total)">
                     </span>
                 </div>
 
@@ -161,11 +209,13 @@
 
                     <div class="input-group shadow-sm rounded border overflow-hidden">
                         <input type="number" @keydown.enter="goToPage(page)"
-                            class="form-control border-0 bg-transparent rounded-start-pill" placeholder="Go to page"
-                            aria-label="Go To Page" x-model="page">
-                        <button tabindex="0" role="button" @click="goToPage(page)"
+                            class="form-control border-0 bg-transparent rounded-start-pill"
+                            placeholder="{{ __('pagination.go_to_page') }}" aria-label="Go To Page" x-model="page">
+                        <button :disabled="loading" tabindex="0" role="button" @click="goToPage(page)"
                             class="btn bg-primary-subtle text-primary" type="button">
-                            <iconify-icon icon="solar:arrow-right-up-bold"></iconify-icon>
+                            <span x-show="loading" class="spinner-border spinner-border-sm ms-1" role="status"
+                                aria-hidden="true"></span>
+                            <iconify-icon x-show="!loading" icon="solar:arrow-right-up-bold"></iconify-icon>
                         </button>
                     </div>
                 </div>
@@ -173,17 +223,16 @@
                 <div class="form-group">
                     <select class="form-select" x-model.number="perPage"
                         @change="fetchData(buildRoute({ perPage: perPage }))">
-                        <option value="5">5 per page</option>
-                        <option value="10">10 per page</option>
-                        <option value="25">25 per page</option>
-                        <option value="50">50 per page</option>
+                        @foreach ($perPageOptions as $option)
+                            <option value="{{ $option }}">{{ $option }} {{ __('pagination.per_page') }}
+                            </option>
+                        @endforeach
                     </select>
                 </div>
 
-
                 <div class="flex-grow-1 text-center text-md-end">
                     <ul class="pagination mb-0 justify-content-center justify-content-md-end flex-wrap flex-md-nowrap"
-                        role="navigation">
+                        role="navigation" x-transition.opacity.duration.200ms>
                         <template x-for="(link, index) in visibleLinks" :key="index">
                             <li class="page-item" :class="{ 'active': link.active, 'disabled': !link.url }">
                                 <a class="page-link px-3" style="min-width: 2.5rem; white-space: nowrap;"
@@ -208,6 +257,8 @@
         document.addEventListener('alpine:init', () => {
 
             Alpine.data('productTable', ($el) => ({
+                paginationMsg: @json(__('pagination.showing_records')),
+                actions: $el.dataset.actions === 'true',
                 rows: [],
                 headers: JSON.parse($el.dataset.headers),
                 paginationInfo: {
@@ -224,9 +275,18 @@
                 route: '',
                 lastRoute: '',
                 currentRoute: '',
+                @if ($actions)
+                    updateRoute: route($el.dataset.updateroute, {
+                        id: '__ID__'
+                    }),
+                    deleteRoute: route($el.dataset.deleteroute, {
+                        id: '__ID__'
+                    }),
+                @endif
                 search: '',
                 loading: true,
                 page: '',
+                locale: $el.dataset.locale,
                 emptyMessage: $el.dataset.emptymessage,
                 storageKey: `visibleColumns:${$el.dataset.tableid || $el.dataset.route}`,
                 buildRoute(overrides = {}, pushToUrl = true) {
@@ -236,6 +296,7 @@
                         sortBy: this.sortBy,
                         sortDir: this.sortDir,
                         search: this.search,
+                        locale: this.locale,
                         ...overrides
                     };
 
@@ -253,7 +314,7 @@
 
                     console.log('final route : ', finalRoute, params, query);
 
-                    if(pushToUrl){
+                    if (pushToUrl) {
                         const currentUrl = new URL(window.location.href);
                         currentUrl.search = query;
                         window.history.pushState('', {}, currentUrl);
@@ -315,8 +376,8 @@
                     if (input === '' || parseInt(input) === 0 || !/^\d+$/.test(input)) {
                         Swal.fire({
                             icon: 'warning',
-                            title: 'Invalid Page',
-                            text: 'The page number is invalid',
+                            title: @json(__('pagination.invalid_page')),
+                            text: @json(__('pagination.invalid_page_number')),
                             confirmButtonColor: '#3085d6',
                         });
 
@@ -338,15 +399,52 @@
                         console.log('current route : ', this.currentRoute);
                         console.log('current page no', this.getPageFromUrl());
 
-                        const res = await fetch(apiRoute);
+                        const res = await fetch(apiRoute, {
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
                         const json = await res.json();
+                        const errorDetails = json?.errors;
+                        const errorMsg = json?.message;
+
+                        if (!res.ok) {
+                            console.error('API Error', errorDetails);
+
+                            Swal.queue({
+                                icon: 'error',
+                                title: errorMsg ?? @json(__('messages.errors.sever.title')),
+                                text: errorDetails ?
+                                    `${JSON.stringify(errorDetails, null, 2)}` :
+                                    @json(__('messages.errors.unknown.title')),
+                                confirmButtonColor: '#3085d6',
+                            });
+
+                            return;
+                        }
+
+                        if (!json.success) {
+
+                            Swal.queue({
+                                icon: 'error',
+                                title: errorMsg ?? @json(__('messages.errors.unknown.title')),
+                                text: errorDetails ?
+                                    `${JSON.stringify(errorDetails, null, 2)}` :
+                                    @json(__('messages.errors.unknown.text')),
+                                confirmButtonColor: '#3085d6',
+                            });
+
+                            return;
+
+                        }
+
                         this.rows = json.data?.data ?? [];
 
                         if (this.rows.length === 0) {
                             Swal.fire({
                                 icon: 'info',
-                                title: 'No Records Found',
-                                text: 'The table is empty.',
+                                title: @json(__('messages.no_records')),
+                                text: @json(__('messages.empty_table')),
                                 confirmButtonColor: '#3085d6',
                             });
                         }
@@ -375,14 +473,55 @@
 
                         Swal.fire({
                             icon: 'error',
-                            title: 'Application Error',
-                            text: 'A client side error has occured : ' + e.message,
+                            title: @json(__('messages.errors.client.title')),
+                            text: @json(__('messages.errors.client.text')).replace(':message', e
+                                .message),
                             confirmButtonColor: '#3085d6',
                         });
 
                     } finally {
                         this.loading = false;
                         BProgress.done();
+                    }
+                },
+                async deleteRow(row) {
+                    const confirmed = await Swal.fire({
+                        title: '{{ __('messages.confirm_delete') }}',
+                        text: '{{ __('messages.delete_warning') }}',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        confirmButtonText: '{{ __('actions.confirm') }}',
+                        cancelButtonText: '{{ __('actions.cancel') }}'
+                    });
+
+                    if (confirmed.isConfirmed) {
+                        const url = this.deleteRoute.replace('__ID__', row.id);
+
+                        try {
+                            const response = await fetch(url, {
+                                method: 'DELETE',
+                                headers: {
+                                    'X-CSRF-TOKEN': document.querySelector(
+                                        'meta[name="csrf-token"]').content,
+                                    'Accept': 'application/json'
+                                }
+                            });
+
+                            if (response.ok) {
+                                // Optional: Show success toast
+                                Swal.fire('Deleted!', 'Your item has been deleted.', 'success');
+
+                                // Remove row from UI
+                               this.fetchData(this.buildRoute());
+                            } else {
+                                const err = await response.json();
+                                Swal.fire('Error', err.message || 'Failed to delete.', 'error');
+                            }
+                        } catch (e) {
+                            Swal.fire('Error', e.message, 'error');
+                        }
                     }
                 },
                 get visibleLinks() {
@@ -481,7 +620,17 @@
                 init() {
                     if (this._initialized) return;
                     console.log($el);
+                    console.log('actions dataset:', $el.dataset.actions);
+
                     this._initialized = true;
+
+                    const urlParams = new URLSearchParams(window.location.search);
+                    this.perPage = parseInt(urlParams.get('perPage')) || this.perPage;
+                    this.search = urlParams.get('search') ?? this.search;
+                    this.sortBy = urlParams.get('sortBy') ?? '';
+                    this.sortDir = urlParams.get('sortDir') ?? 'asc';
+                    this.page = urlParams.get('page') ?? 1;
+
                     console.log('Using storageKey:', this.storageKey);
                     this.loadVisibleColumns();
                     console.log('Visible Columns:', this.visibleColumns);
@@ -491,8 +640,9 @@
                     this.route = this.buildRoute({
                         perPage: this.perPage,
                         sortBy: this.sortBy,
-                        sortDir: this.sortDir
-                    });
+                        sortDir: this.sortDir,
+                        page: this.page
+                    }, false);
                     this.fetchData(this.route);
                 }
             }));

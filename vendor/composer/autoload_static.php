@@ -99,6 +99,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Clock\\' => 24,
             'Stichoza\\GoogleTranslate\\' => 25,
+            'Spatie\\Translatable\\' => 20,
             'Spatie\\ResponseCache\\' => 21,
             'Spatie\\Permission\\' => 18,
             'Spatie\\LaravelPackageTools\\' => 27,
@@ -140,7 +141,6 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
             'League\\Flysystem\\' => 17,
             'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
-            'Laraveledge\\LaravelLocale\\' => 26,
             'Laravel\\Tinker\\' => 15,
             'Laravel\\SerializableClosure\\' => 28,
             'Laravel\\Sanctum\\' => 16,
@@ -402,6 +402,10 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         array (
             0 => __DIR__ . '/..' . '/stichoza/google-translate-php/src',
         ),
+        'Spatie\\Translatable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-translatable/src',
+        ),
         'Spatie\\ResponseCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-responsecache/src',
@@ -507,10 +511,6 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'League\\CommonMark\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
-        ),
-        'Laraveledge\\LaravelLocale\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/laraveledge/laravel-locale/src',
         ),
         'Laravel\\Tinker\\' => 
         array (
@@ -830,10 +830,12 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
     public static $classMap = array (
         'App\\Http\\Controllers\\Admin\\Auth\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Auth/AuthController.php',
         'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DashboardController.php',
+        'App\\Http\\Controllers\\Admin\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PageController.php',
         'App\\Http\\Controllers\\Admin\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProductController.php',
         'App\\Http\\Controllers\\Admin\\SettingController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SettingController.php',
         'App\\Http\\Controllers\\Api\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ProductController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\PageShowController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageShowController.php',
         'App\\Http\\Controllers\\Shop\\Account\\AddressController' => __DIR__ . '/../..' . '/app/Http/Controllers/Shop/Account/AddressController.php',
         'App\\Http\\Controllers\\Shop\\Account\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Shop/Account/DashboardController.php',
         'App\\Http\\Controllers\\Shop\\Account\\GarageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Shop/Account/GarageController.php',
@@ -849,6 +851,8 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'App\\Http\\Controllers\\Shop\\Order\\OrderTrackingController' => __DIR__ . '/../..' . '/app/Http/Controllers/Shop/Order/OrderTrackingController.php',
         'App\\Http\\Controllers\\Shop\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Shop/ProductController.php',
         'App\\Http\\Controllers\\Shop\\WishlistController' => __DIR__ . '/../..' . '/app/Http/Controllers/Shop/WishlistController.php',
+        'App\\Http\\Middleware\\AdminLocale' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminLocale.php',
+        'App\\Models\\Page' => __DIR__ . '/../..' . '/app/Models/Page.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\View\\Components\\Admin\\Dashboard\\Customizer' => __DIR__ . '/../..' . '/app/View/Components/Admin/Dashboard/Customizer.php',
@@ -4538,12 +4542,6 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
-        'Laraveledge\\LaravelLocale\\Facades\\Locale' => __DIR__ . '/..' . '/laraveledge/laravel-locale/src/Facades/Locale.php',
-        'Laraveledge\\LaravelLocale\\LaravelLocaleServiceProvider' => __DIR__ . '/..' . '/laraveledge/laravel-locale/src/LaravelLocaleServiceProvider.php',
-        'Laraveledge\\LaravelLocale\\Middleware\\EnsureIsLocale' => __DIR__ . '/..' . '/laraveledge/laravel-locale/src/Middleware/EnsureIsLocale.php',
-        'Laraveledge\\LaravelLocale\\Middleware\\SetDefaultLocaleForUrls' => __DIR__ . '/..' . '/laraveledge/laravel-locale/src/Middleware/SetDefaultLocaleForUrls.php',
-        'Laraveledge\\LaravelLocale\\Middleware\\SetLocale' => __DIR__ . '/..' . '/laraveledge/laravel-locale/src/Middleware/SetLocale.php',
-        'Laraveledge\\LaravelLocale\\Services\\LocaleService' => __DIR__ . '/..' . '/laraveledge/laravel-locale/src/Services/LocaleService.php',
         'League\\CommonMark\\CommonMarkConverter' => __DIR__ . '/..' . '/league/commonmark/src/CommonMarkConverter.php',
         'League\\CommonMark\\ConverterInterface' => __DIR__ . '/..' . '/league/commonmark/src/ConverterInterface.php',
         'League\\CommonMark\\Delimiter\\Bracket' => __DIR__ . '/..' . '/league/commonmark/src/Delimiter/Bracket.php',
@@ -7239,6 +7237,12 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'Spatie\\ResponseCache\\ResponseCacheServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-responsecache/src/ResponseCacheServiceProvider.php',
         'Spatie\\ResponseCache\\Serializers\\DefaultSerializer' => __DIR__ . '/..' . '/spatie/laravel-responsecache/src/Serializers/DefaultSerializer.php',
         'Spatie\\ResponseCache\\Serializers\\Serializer' => __DIR__ . '/..' . '/spatie/laravel-responsecache/src/Serializers/Serializer.php',
+        'Spatie\\Translatable\\Events\\TranslationHasBeenSetEvent' => __DIR__ . '/..' . '/spatie/laravel-translatable/src/Events/TranslationHasBeenSetEvent.php',
+        'Spatie\\Translatable\\Exceptions\\AttributeIsNotTranslatable' => __DIR__ . '/..' . '/spatie/laravel-translatable/src/Exceptions/AttributeIsNotTranslatable.php',
+        'Spatie\\Translatable\\Facades\\Translatable' => __DIR__ . '/..' . '/spatie/laravel-translatable/src/Facades/Translatable.php',
+        'Spatie\\Translatable\\HasTranslations' => __DIR__ . '/..' . '/spatie/laravel-translatable/src/HasTranslations.php',
+        'Spatie\\Translatable\\Translatable' => __DIR__ . '/..' . '/spatie/laravel-translatable/src/Translatable.php',
+        'Spatie\\Translatable\\TranslatableServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-translatable/src/TranslatableServiceProvider.php',
         'Stichoza\\GoogleTranslate\\Exceptions\\LanguagesRequestException' => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Exceptions/LanguagesRequestException.php',
         'Stichoza\\GoogleTranslate\\Exceptions\\LargeTextException' => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Exceptions/LargeTextException.php',
         'Stichoza\\GoogleTranslate\\Exceptions\\RateLimitException' => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Exceptions/RateLimitException.php',

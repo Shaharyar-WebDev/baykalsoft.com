@@ -169,7 +169,8 @@
              </a>
              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                  <div class="d-flex align-items-center justify-content-between">
-                     <ul class="navbar-nav flex-row mx-auto ms-lg-auto align-items-center justify-content-center">
+                     <ul
+                         class="navbar-nav flex-row gap-2 mx-auto ms-lg-auto align-items-center justify-content-center">
                          <li class="nav-item dropdown">
                              <a href="javascript:void(0)"
                                  class="nav-link nav-icon-hover-bg rounded-circle d-flex d-lg-none align-items-center justify-content-center"
@@ -178,16 +179,6 @@
                                  <iconify-icon icon="solar:sort-line-duotone" class="fs-6"></iconify-icon>
                              </a>
                          </li>
-                         {{-- <li class="nav-item">
-                             <a class="nav-link moon dark-layout nav-icon-hover-bg rounded-circle"
-                                 href="javascript:void(0)">
-                                 <iconify-icon icon="solar:moon-line-duotone" onclick="localStorage.setItem('theme', 'dark')" class="moon fs-6"></iconify-icon>
-                             </a>
-                             <a class="nav-link sun light-layout nav-icon-hover-bg rounded-circle"
-                                 href="javascript:void(0)" style="display: none">
-                                 <iconify-icon icon="solar:sun-2-line-duotone" onclick="localStorage.setItem('theme', 'light')" class="sun fs-6"></iconify-icon>
-                             </a>
-                         </li> --}}
                          <li class="nav-item d-block d-xl-none">
                              <a class="nav-link nav-icon-hover-bg rounded-circle" href="javascript:void(0)"
                                  data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -198,12 +189,13 @@
                          <!-- ------------------------------- -->
                          <!-- start notification Dropdown -->
                          <!-- ------------------------------- -->
-                         <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
-                             <a class="nav-link position-relative" href="javascript:void(0)" id="drop2"
-                                 aria-expanded="false">
-                                 <iconify-icon icon="solar:bell-bing-line-duotone" class="fs-6"></iconify-icon>
-                             </a>
-                             <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up"
+                         <li class="dropdown">
+                             <button
+                                 class="nav-link btn dropdown-toggle d-flex align-items-center justify-content-center border-0 bg-transparent p-2"
+                                 type="button" data-bs-toggle="dropdown" id="drop2" aria-expanded="false">
+                                 <iconify-icon icon="solar:bell-bing-line-duotone" class="fs-5"></iconify-icon>
+                             </button>
+                             <div class="dropdown-menu shadow-lg border content-dd dropdown-menu-end dropdown-menu-animate-up"
                                  aria-labelledby="drop2">
                                  <div class="d-flex align-items-center justify-content-between py-3 px-7">
                                      <h5 class="mb-0 fs-5 fw-semibold">Notifications</h5>
@@ -314,55 +306,35 @@
                          <!-- ------------------------------- -->
                          <!-- start language Dropdown -->
                          <!-- ------------------------------- -->
-                         <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
-                             <a class="nav-link" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
-                                 aria-expanded="false">
-                                 <img src="{{ asset('images/admin/flag/icon-flag-en.svg') }}" alt="matdash-img"
-                                     width="20px" height="20px" class="rounded-circle object-fit-cover round-20"
-                                     loading="lazy">
-                             </a>
-                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
-                                 aria-labelledby="drop2">
+                         <li class="dropdown">
+                             <button
+                                 class="nav-link btn dropdown-toggle d-flex align-items-center p-0 border-0 bg-transparent"
+                                 type="button" data-bs-toggle="dropdown" id="drop2" aria-expanded="false">
+                                 <div class="d-flex align-items-center">
+                                     <span>
+                                         @php
+                                             $localeLabel =
+                                                 config('locale.locale_labels')[app()->getLocale()] ??
+                                                 app()->getLocale();
+                                         @endphp
+                                         {{ $localeLabel }}
+                                     </span>
+                                 </div>
+                             </button>
+
+                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up shadow-lg border mt-2"
+                                 aria-labelledby="drop2" style="min-width: 180px;">
                                  <div class="message-body">
-                                     <a href="javascript:void(0)"
-                                         class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                                         <div class="position-relative">
-                                             <img src="{{ asset('images/admin/flag/icon-flag-en.svg') }}"
-                                                 alt="matdash-img" width="20px" height="20px"
-                                                 class="rounded-circle object-fit-cover round-20" loading="lazy">
-                                         </div>
-                                         <p class="mb-0 fs-3">English (UK)</p>
-                                     </a>
-                                     <a href="javascript:void(0)"
-                                         class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                                         <div class="position-relative">
-                                             <img src="{{ asset('images/admin/flag/icon-flag-cn.svg') }}"
-                                                 alt="matdash-img" width="20px" height="20px"
-                                                 class="rounded-circle object-fit-cover round-20" loading="lazy">
-                                         </div>
-                                         <p class="mb-0 fs-3">中国人 (Chinese)</p>
-                                     </a>
-                                     <a href="javascript:void(0)"
-                                         class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                                         <div class="position-relative">
-                                             <img src="{{ asset('images/admin/flag/icon-flag-fr.svg') }}"
-                                                 alt="matdash-img" width="20px" height="20px"
-                                                 class="rounded-circle object-fit-cover round-20" loading="lazy">
-                                         </div>
-                                         <p class="mb-0 fs-3">français (French)</p>
-                                     </a>
-                                     <a href="javascript:void(0)"
-                                         class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                                         <div class="position-relative">
-                                             <img src="{{ asset('images/admin/flag/icon-flag-sa.svg') }}"
-                                                 alt="matdash-img" width="20px" height="20px"
-                                                 class="rounded-circle object-fit-cover round-20" loading="lazy">
-                                         </div>
-                                         <p class="mb-0 fs-3">عربي (Arabic)</p>
-                                     </a>
+                                     @foreach (config('locale.locale_labels') as $locale => $label)
+                                         <a href="{{ route('admin.locale', ['locale' => $locale]) }}"
+                                             class="d-flex align-items-center gap-3 py-2 px-3 dropdown-item">
+                                             <span class="fs-3">{{ $label }}</span>
+                                         </a>
+                                     @endforeach
                                  </div>
                              </div>
                          </li>
+
                          <!-- ------------------------------- -->
                          <!-- end language Dropdown -->
                          <!-- ------------------------------- -->
@@ -370,51 +342,41 @@
                          <!-- ------------------------------- -->
                          <!-- start profile Dropdown -->
                          <!-- ------------------------------- -->
-                         <li class="nav-item dropdown">
-                             <a class="nav-link" href="javascript:void(0)" id="drop1" aria-expanded="false">
-                                 <div class="d-flex align-items-center gap-2 lh-base">
-                                     <img src="{{ asset('images/admin/profile/user-1.jpg') }}" class="rounded-circle"
-                                         width="35" height="35" alt="matdash-img" loading="lazy">
-                                     <iconify-icon icon="solar:alt-arrow-down-bold" class="fs-2"></iconify-icon>
+                         <li class="dropdown p-2">
+                             <button
+                                 class="nav-link btn dropdown-toggle d-flex align-items-center p-0 border-0 bg-transparent"
+                                 type="button" data-bs-toggle="dropdown" id="drop1" aria-expanded="false">
+                                 <div class="d-flex align-items-center gap-2">
+                                     <img src="{{ asset('images/admin/profile/user-1.jpg') }}"
+                                         class="rounded-circle img-fluid" width="35" height="35"
+                                         alt="Profile Image" loading="lazy">
                                  </div>
-                             </a>
-                             <div class="dropdown-menu profile-dropdown dropdown-menu-end dropdown-menu-animate-up"
-                                 aria-labelledby="drop1">
-                                 <div class="position-relative px-4 pt-3 pb-2">
-                                     <div class="d-flex align-items-center mb-3 pb-3 border-bottom gap-6">
+                             </button>
+                             <div class="dropdown-menu dropdown-menu-end border shadow-lg dropdown-menu-animate-up p-0 mt-2 shadow-sm"
+                                 aria-labelledby="drop1" style="min-width: 250px; max-width: 100vw;">
+
+                                 <div class="px-3 pt-3 pb-2">
+                                     <div class="d-flex align-items-center pb-3 border-bottom gap-3">
                                          <img src="{{ asset('images/admin/profile/user-1.jpg') }}"
-                                             class="rounded-circle" width="56" height="56" alt="matdash-img"
-                                             loading="lazy">
-                                         <div>
-                                             <h5 class="mb-0 fs-12">David McMichael <span
-                                                     class="text-success fs-11">Pro</span>
-                                             </h5>
-                                             <p class="mb-0 text-dark">
-                                                 david@wrappixel.com
-                                             </p>
+                                             class="rounded-circle img-fluid" width="56" height="56"
+                                             alt="Profile Image" loading="lazy">
+                                         <div class="flex-grow-1">
+                                             <h6 class="mb-0 fs-14">David McMichael <span
+                                                     class="text-success fs-12">Pro</span></h6>
+                                             <small class="text-muted">david@wrappixel.com</small>
                                          </div>
                                      </div>
-                                     <div class="message-body">
-                                         <a href="page-user-profile.html" class="p-2 dropdown-item h6 rounded-1">
+
+                                     <div class="mt-2">
+                                         <a href="page-user-profile.html"
+                                             class="d-flex align-items-center gap-2 py-2 px-3 dropdown-item">
                                              My Profile
-                                         </a>
-                                         <a href="page-pricing.html" class="p-2 dropdown-item h6 rounded-1">
-                                             My Subscription
-                                         </a>
-                                         <a href="app-invoice.html" class="p-2 dropdown-item h6 rounded-1">
-                                             My Invoice <span
-                                                 class="badge bg-danger-subtle text-danger rounded ms-8">4</span>
-                                         </a>
-                                         <a href="page-account-settings.html" class="p-2 dropdown-item h6 rounded-1">
-                                             Account Settings
-                                         </a>
-                                         <a href="authentication-login2.html" class="p-2 dropdown-item h6 rounded-1">
-                                             Sign Out
                                          </a>
                                      </div>
                                  </div>
                              </div>
                          </li>
+
                          <!-- ------------------------------- -->
                          <!-- end profile Dropdown -->
                          <!-- ------------------------------- -->
@@ -435,7 +397,8 @@
              <nav class="sidebar-nav scroll-sidebar">
                  <div class="offcanvas-header justify-content-between">
                      <a href="{{ route('admin.dashboard') }}" class="text-nowrap logo-img">
-                         <img src="{{ asset('images/admin/logos/logo-icon.svg') }}" alt="Logo" width="80px" loading="lazy">
+                         <img src="{{ asset('images/admin/logos/logo-icon.svg') }}" alt="Logo" width="80px"
+                             loading="lazy">
                      </a>
                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                          aria-label="Close"></button>
@@ -725,7 +688,8 @@
              </ul>
              <div class="d-block d-xl-none">
                  <a href="{{ route('admin.dashboard') }}" class="text-nowrap nav-link">
-                     <img src="{{ asset('images/admin/logos/logo1.svg') }}" alt="logo" width="80px" loading="lazy">
+                     <img src="{{ asset('images/admin/logos/logo1.svg') }}" alt="logo" width="80px"
+                         loading="lazy">
                  </a>
              </div>
              <a class="navbar-toggler nav-icon-hover p-0 border-0 nav-icon-hover-bg rounded-circle"
@@ -766,12 +730,14 @@
                          <!-- ------------------------------- -->
                          <!-- start notification Dropdown -->
                          <!-- ------------------------------- -->
-                         <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
-                             <a class="nav-link position-relative" href="javascript:void(0)" id="drop2"
-                                 aria-expanded="false">
-                                 <iconify-icon icon="solar:bell-bing-line-duotone" class="fs-6"></iconify-icon>
-                             </a>
-                             <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up"
+                         <li class="dropdown">
+                             <button
+                                 class="nav-link btn dropdown-toggle d-flex align-items-center justify-content-center border-0 bg-transparent p-2"
+                                 type="button" data-bs-toggle="dropdown" id="drop2" aria-expanded="false">
+                                 <iconify-icon icon="solar:bell-bing-line-duotone" class="fs-5"></iconify-icon>
+                             </button>
+                             <div class="dropdown-menu shadow-lg border content-dd dropdown-menu-end dropdown-menu-animate-up"
+                                 style="min-width: 280px; max-width: 90vw; overflow-x: hidden;"
                                  aria-labelledby="drop2">
                                  <div class="d-flex align-items-center justify-content-between py-3 px-7">
                                      <h5 class="mb-0 fs-5 fw-semibold">Notifications</h5>
@@ -882,52 +848,31 @@
                          <!-- ------------------------------- -->
                          <!-- start language Dropdown -->
                          <!-- ------------------------------- -->
-                         <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
-                             <a class="nav-link" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
-                                 aria-expanded="false">
-                                 <img src="{{ asset('images/admin/flag/icon-flag-en.svg') }}" alt="matdash-img"
-                                     width="20px" height="20px" class="rounded-circle object-fit-cover round-20"
-                                     loading="lazy">
-                             </a>
-                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
-                                 aria-labelledby="drop2">
+                         <li class="dropdown">
+                             <button
+                                 class="nav-link btn dropdown-toggle d-flex align-items-center p-0 border-0 bg-transparent"
+                                 type="button" data-bs-toggle="dropdown" id="drop2" aria-expanded="false">
+                                 <div class="d-flex align-items-center">
+                                     <span>
+                                         @php
+                                             $localeLabel =
+                                                 config('locale.locale_labels')[app()->getLocale()] ??
+                                                 app()->getLocale();
+                                         @endphp
+                                         {{ $localeLabel }}
+                                     </span>
+                                 </div>
+                             </button>
+
+                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up shadow-lg border mt-2"
+                                 aria-labelledby="drop2" style="min-width: 180px;">
                                  <div class="message-body">
-                                     <a href="javascript:void(0)"
-                                         class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                                         <div class="position-relative">
-                                             <img src="{{ asset('images/admin/flag/icon-flag-en.svg') }}"
-                                                 alt="matdash-img" width="20px" height="20px"
-                                                 class="rounded-circle object-fit-cover round-20" loading="lazy">
-                                         </div>
-                                         <p class="mb-0 fs-3">English (UK)</p>
-                                     </a>
-                                     <a href="javascript:void(0)"
-                                         class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                                         <div class="position-relative">
-                                             <img src="{{ asset('images/admin/flag/icon-flag-cn.svg') }}"
-                                                 alt="matdash-img" width="20px" height="20px"
-                                                 class="rounded-circle object-fit-cover round-20" loading="lazy">
-                                         </div>
-                                         <p class="mb-0 fs-3">中国人 (Chinese)</p>
-                                     </a>
-                                     <a href="javascript:void(0)"
-                                         class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                                         <div class="position-relative">
-                                             <img src="{{ asset('images/admin/flag/icon-flag-fr.svg') }}"
-                                                 alt="matdash-img" width="20px" height="20px"
-                                                 class="rounded-circle object-fit-cover round-20" loading="lazy">
-                                         </div>
-                                         <p class="mb-0 fs-3">français (French)</p>
-                                     </a>
-                                     <a href="javascript:void(0)"
-                                         class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                                         <div class="position-relative">
-                                             <img src="{{ asset('images/admin/flag/icon-flag-sa.svg') }}"
-                                                 alt="matdash-img" width="20px" height="20px"
-                                                 class="rounded-circle object-fit-cover round-20" loading="lazy">
-                                         </div>
-                                         <p class="mb-0 fs-3">عربي (Arabic)</p>
-                                     </a>
+                                     @foreach (config('locale.locale_labels') as $locale => $label)
+                                         <a href="{{ route('admin.locale', ['locale' => $locale]) }}"
+                                             class="d-flex align-items-center gap-3 py-2 px-3 dropdown-item">
+                                             <span class="fs-3">{{ $label }}</span>
+                                         </a>
+                                     @endforeach
                                  </div>
                              </div>
                          </li>
@@ -938,46 +883,35 @@
                          <!-- ------------------------------- -->
                          <!-- start profile Dropdown -->
                          <!-- ------------------------------- -->
-                         <li class="nav-item dropdown">
-                             <a class="nav-link" href="javascript:void(0)" id="drop1" aria-expanded="false">
-                                 <div class="d-flex align-items-center gap-2 lh-base">
-                                     <img src="{{ asset('images/admin/profile/user-1.jpg') }}" class="rounded-circle"
-                                         width="35" height="35" alt="matdash-img" loading="lazy">
-                                     <iconify-icon icon="solar:alt-arrow-down-bold" class="fs-2"></iconify-icon>
+                         <li class="dropdown p-2">
+                             <button
+                                 class="nav-link btn dropdown-toggle d-flex align-items-center p-0 border-0 bg-transparent"
+                                 type="button" data-bs-toggle="dropdown" id="drop1" aria-expanded="false">
+                                 <div class="d-flex align-items-center gap-2">
+                                     <img src="{{ asset('images/admin/profile/user-1.jpg') }}"
+                                         class="rounded-circle img-fluid" width="35" height="35"
+                                         alt="Profile Image" loading="lazy">
                                  </div>
-                             </a>
-                             <div class="dropdown-menu profile-dropdown dropdown-menu-end dropdown-menu-animate-up"
-                                 aria-labelledby="drop1">
-                                 <div class="position-relative px-4 pt-3 pb-2">
-                                     <div class="d-flex align-items-center mb-3 pb-3 border-bottom gap-6">
+                             </button>
+                             <div class="dropdown-menu dropdown-menu-end border shadow-lg dropdown-menu-animate-up p-0 mt-2 shadow-sm"
+                                 aria-labelledby="drop1" style="min-width: 250px; max-width: 100vw;">
+
+                                 <div class="px-3 pt-3 pb-2">
+                                     <div class="d-flex align-items-center pb-3 border-bottom gap-3">
                                          <img src="{{ asset('images/admin/profile/user-1.jpg') }}"
-                                             class="rounded-circle" width="56" height="56" alt="matdash-img"
-                                             loading="lazy">
-                                         <div>
-                                             <h5 class="mb-0 fs-12">David McMichael <span
-                                                     class="text-success fs-11">Pro</span>
-                                             </h5>
-                                             <p class="mb-0 text-dark">
-                                                 david@wrappixel.com
-                                             </p>
+                                             class="rounded-circle img-fluid" width="56" height="56"
+                                             alt="Profile Image" loading="lazy">
+                                         <div class="flex-grow-1">
+                                             <h6 class="mb-0 fs-14">David McMichael <span
+                                                     class="text-success fs-12">Pro</span></h6>
+                                             <small class="text-muted">david@wrappixel.com</small>
                                          </div>
                                      </div>
-                                     <div class="message-body">
-                                         <a href="page-user-profile.html" class="p-2 dropdown-item h6 rounded-1">
+
+                                     <div class="mt-2">
+                                         <a href="page-user-profile.html"
+                                             class="d-flex align-items-center gap-2 py-2 px-3 dropdown-item">
                                              My Profile
-                                         </a>
-                                         <a href="page-pricing.html" class="p-2 dropdown-item h6 rounded-1">
-                                             My Subscription
-                                         </a>
-                                         <a href="app-invoice.html" class="p-2 dropdown-item h6 rounded-1">
-                                             My Invoice <span
-                                                 class="badge bg-danger-subtle text-danger rounded ms-8">4</span>
-                                         </a>
-                                         <a href="page-account-settings.html" class="p-2 dropdown-item h6 rounded-1">
-                                             Account Settings
-                                         </a>
-                                         <a href="authentication-login2.html" class="p-2 dropdown-item h6 rounded-1">
-                                             Sign Out
                                          </a>
                                      </div>
                                  </div>

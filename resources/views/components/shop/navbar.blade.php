@@ -1134,7 +1134,18 @@
                                     </a>
                                     <div class="main-menu__submenu">
                                         <ul class="menu">
+                                            @php
+                                                use App\Models\Page;
+                                                $pages = Page::all();
+                                            @endphp
+                                            @foreach ($pages as $page)
                                             <li class="menu__item">
+                                                <a href="{{ route('pages.show', ['slug' => $page->slug]) }}" class="menu__link">
+                                                    {{ $page->getTranslation('title', app()->getLocale()) }}
+                                                </a>
+                                            </li>
+                                            @endforeach
+                                            {{-- <li class="menu__item">
                                                 <a href="about-us.html" class="menu__link">
                                                     About Us
                                                 </a>
@@ -1173,7 +1184,7 @@
                                                 <a href="typography.html" class="menu__link">
                                                     Typography
                                                 </a>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </div>
                                 </li>

@@ -1,6 +1,6 @@
 <?php
 
- /*
+/*
     |--------------------------------------------------------------------------
     | Supported Locales
     |--------------------------------------------------------------------------
@@ -14,4 +14,9 @@ return [
     'supported_locales' => ['en', 'tr', 'ur'],
     'fallback_locale' => 'en',
     'rtl_locales' => ['ur'],
+    'locale_labels' => [
+        'en' => 'English',
+        'tr' => 'Turkish',
+        'ur' => 'Urdu'
+    ],
 ];

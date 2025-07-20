@@ -48,11 +48,27 @@
         border: 1px solid !important;
     }
 
+    input:focus {
+        border: 1px solid !important;
+    }
+
+    input:focus-visible {
+        border: 1px solid !important;
+    }
+
     th:focus {
         border: 1px solid var(--bs-primary) !important;
     }
 
     th:focus-visible {
+        border: 1px solid var(--bs-primary) !important;
+    }
+
+    tr:focus {
+        border: 1px solid var(--bs-primary) !important;
+    }
+
+    tr:focus-visible {
         border: 1px solid var(--bs-primary) !important;
     }
 
@@ -86,6 +102,8 @@
 <noscript>
     <link rel="stylesheet" href="https://unpkg.com/@bprogress/core/dist/index.css">
 </noscript>
+
+<link rel="stylesheet" href="{{ asset('libs/sweetalert2/dist/sweetalert2.min.css') }}">
 
 <style>
     .bprogress .bar {

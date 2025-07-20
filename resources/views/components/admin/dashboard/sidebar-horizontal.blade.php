@@ -16,7 +16,7 @@
                             <span>
                                 <iconify-icon icon="{{ $link['icon'] }}" class=""></iconify-icon>
                             </span>
-                            <span class="hide-menu">{{ $link['label'] }}</span>
+                            <span class="hide-menu">{{ __($link['label']) }}</span>
                         </a>
                         @isset($link['children'])
                             <ul aria-expanded="false" class="collapse first-level">
@@ -31,7 +31,7 @@
                                             <iconify-icon icon="{{ $child_link['icon'] }}" style="color: var(--bs-heading-color);"></iconify-icon>
                                             @endif
                                             @endisset
-                                            <span class="hide-menu">{{ $child_link['label'] }}</span>
+                                            <span class="hide-menu">{{ __($child_link['label']) }}</span>
                                         </a>
                                     </li>
                                 @endforeach

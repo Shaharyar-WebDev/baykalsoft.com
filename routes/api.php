@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\PageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProductController;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -10,7 +12,42 @@ Route::get('/user', function (Request $request) {
 
 Route::apiResource('/get_products', ProductController::class);
 
-Route::apiResource('/get_products123', ProductController::class);
+Route::get('/orders', function (Request $request) {
+    // Fake data generation
+    $products = collect(range(1, 100))->map(function ($i) {
+        return [
+            'id' => $i,
+            'sku' => 'SKU-' . str_pad($i, 5, '0', STR_PAD_LEFT),
+            'name' => "Product $i",
+            'category' => ['Electronics', 'Clothing', 'Books', 'Home'][array_rand([1, 2, 3, 4])],
+            'price' => rand(100, 999),
+            'stock' => rand(0, 100),
+            'rating' => round(mt_rand(10, 50) / 10, 1), // 1.0 to 5.0
+            'status' => rand(0, 1) ? 'active' : 'inactive',
+            'created_at' => now()->subDays(rand(0, 365))->toDateString(),
+            'updated_at' => now()->subDays(rand(0, 30))->toDateString(),
+        ];
+    });
+
+    // Pagination logic
+    $page = $request->get('page', 1);
+    $perPage = $request->get('perPage', 10);
+    $paginated = new LengthAwarePaginator(
+        $products->forPage($page, $perPage)->values(),
+        $products->count(),
+        $perPage,
+        $page,
+        ['path' => $request->url(), 'query' => $request->query()]
+    );
+
+       return response()->json([
+            'success' => true,
+            'message' => 'Fetched successfully',
+            'data' =>  $paginated,
+        ], 200);
+
+    // return response()->json($paginated);
+})->name('admin.orders');
 
 Route::get('/electronics', function () {
     $allProducts = collect([
@@ -82,6 +119,7 @@ Route::get('/electronics', function () {
     //  return response()->json($allProducts->count());
 
     return response()->json([
+        'success' => true,
         'message' => 'Fetched successfully',
         'data' => [
             'current_page' => (int) $page,
@@ -93,5 +131,12 @@ Route::get('/electronics', function () {
             'last_page' => ceil($allProducts->count() / $perPage),
             'links' => generatePaginationLinks($page, ceil($allProducts->count() / $perPage)),
         ]
-    ]);
+    ], 200);
 })->name('admin.ele');
+
+Route::as('admin.api.')->group(function(){
+
+    Route::apiResource('/pages', PageController::class);
+
+});
+

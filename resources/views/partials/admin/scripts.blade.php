@@ -3,6 +3,8 @@
 <!-- Include the JS (from CDN) -->
 <script src="https://unpkg.com/@bprogress/core/dist/index.global.js"></script>
 <script src="{{ asset('libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('libs/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+
 <script src="{{ asset('libs/simplebar/dist/simplebar.min.js') }}"></script>
 
 <script src="{{ asset('js/admin/theme/theme.js') }}"></script>
@@ -15,24 +17,66 @@
 <script src="{{ asset('libs/apexcharts/dist/apexcharts.min.js') }}"></script>
 <script src="{{ asset('libs/fullcalendar/index.global.min.js') }}"></script>
 
-@stack('scripts')
 <script>
-    const {
-        BProgress
-    } = BProgressJS;
+    // try {
+        const {
+            BProgress
+        } = BProgressJS;
 
-    BProgress.configure({
-        color: '#0d6efd',
-        height: '4px',
-        position: 'top',
-        transition: '0.4s ease',
-    });
+        BProgress.configure({
+            color: '#0d6efd',
+            height: '4px',
+            position: 'top',
+            transition: '0.4s ease',
+        });
 
-    // Start and done demo
-    BProgress.start();
+        // Start and done demo
+        BProgress.start();
+    // } catch (e) {
+        // console.error(e.message);
+    // }
 
+    function queueSwal(options = {}) {
+        console.trace("Swal queued");
+
+        window.swalQueue ??= Promise.resolve();
+
+        const defaults = {
+            icon: 'error',
+            title: 'Error',
+            confirmButtonColor: '#3085d6',
+        };
+
+        window.swalQueue = window.swalQueue.then(() =>
+            Swal.fire({
+                ...defaults,
+                ...options
+            })
+        );
+
+    }
+
+    Swal.queue = queueSwal;
 
     document.addEventListener('DOMContentLoaded', () => {
+
+        // queueSwal(); // uses defaults
+        // queueSwal({
+        //     title: 'Warning',
+        //     text: 'Please try again later.'
+        // });
+        // queueSwal({
+        //     icon: 'info',
+        //     html: '<b>Details here</b>',
+        //     footer: 'More info in logs'
+        // });
+        // queueSwal({
+        //     icon: 'success',
+        //     title: 'Done!',
+        //     timer: 2000,
+        //     showConfirmButton: false
+        // });
+
 
         let sidebarOpen = localStorage.getItem("sidebarOpen") === "true";
 
@@ -94,4 +138,8 @@
         BProgress.done();
     });
 </script>
+
+@stack('scripts')
+
+{{-- @stack('scripts-lp') --}}
 @vite(['resources/js/admin/app.js'])

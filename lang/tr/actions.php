@@ -117,4 +117,9 @@ return array (
   'view' => 'Görüş',
   'yes' => 'Evet',
   'wait' => 'Lütfen bekleyin...',
+  'reset' => 'Sıfırla',
+  'columns' => 'Sütunlar',
+  'deselect_all' => 'Tümünü seçimi kaldır',
+  'invalid_page' => 'Geçersiz Sayfa',
+  'invalid_page_number' => 'Girdiğiniz sayfa numarası geçersiz.',
 );

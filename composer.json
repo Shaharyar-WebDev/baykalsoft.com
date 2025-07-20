@@ -15,9 +15,9 @@
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1",
-        "laraveledge/laravel-locale": "^1.9",
         "spatie/laravel-permission": "^6.20",
         "spatie/laravel-responsecache": "^7.7",
+        "spatie/laravel-translatable": "^6.11",
         "tanmuhittin/laravel-google-translate": "^2.4",
         "tightenco/ziggy": "^2.5"
     },
